@@ -25,37 +25,65 @@ body {
     font-size: 1.2rem;
   }
   
-  nav {
-    background: #1b6ab8;
-    box-shadow: 0 4px 6px rgba(11, 4, 4, 0.1); 
-    padding: 0.2rem;
-    margin: 0;
-    z-index: calc(2);
-  }
-  
+ /* Modern Navbar Styling with #0066cc Blue */
+nav {
+  background: #004c99; /* Match navbar background to the #0066cc color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  padding: 1rem 2rem;
+  margin: 0;
+  position: sticky; /* Sticks to the top on scroll */
+  top: 0;
+  z-index: 10; /* Ensures it stays on top */
+  display: flex;
+  justify-content: space-between; /* Space between logo and links */
+  align-items: center; /* Center content vertically */
+}
+
+/* Logo Styling */
+nav .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff; /* White logo text for contrast */
+  text-transform: capitalize;
+  font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+}
+
+/* Navbar List */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px; /* Space between links */
+}
+
+/* Navbar Links Styling */
+nav ul li a {
+  color: #ffffff; /* White links for contrast */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth effects */
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+  color: #cce1ff; /* Lighter blue on hover */
+  border-bottom: 2px solid #cce1ff; /* Underline effect */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
   nav ul {
-    list-style: none;
-    padding: 0.5rem;
-    margin: 0;
-    display: flex;
-    justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
   }
-  
-  nav ul li {
-    margin: 0 20px;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-  }
-  
-  nav ul li a:hover {
-    text-decoration: underline;
-    opacity: 0.7;
-  }
-  
+}
+
+
+
   section {
     padding: 20px;
     max-width: 900px;
@@ -134,12 +162,43 @@ body {
   text-transform: uppercase;
   }
 
+ /* Modern Footer Styling */
+footer {
+  background: #ffffff; /* White background for a clean look */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow on top for depth */
+  padding: 1rem 2rem;
+  text-align: center;
+  color: #333; /* Dark gray text for readability */
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Footer Links Styling */
+footer a {
+  color: #0066cc; /* Soft blue color for links */
+  text-decoration: none;
+  margin: 0 10px; /* Space between links */
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition */
+}
+
+/* Footer Link Hover Effect */
+footer a:hover {
+  color: #004c99; /* Darker blue on hover */
+  text-decoration: underline; /* Underline effect on hover */
+}
+
+/* Responsive Design for Mobile Footer */
+@media (max-width: 768px) {
   footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #1b6ab8;
-    color: white;
+      padding: 1rem;
   }
+
+  footer a {
+      display: block; /* Stack links vertically on small screens */
+      margin: 5px 0; /* Adjust spacing */
+  }
+}
+
   
   ul {
     padding-left: 20px;
