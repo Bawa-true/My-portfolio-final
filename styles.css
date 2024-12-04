@@ -25,11 +25,11 @@ body {
     font-size: 1.2rem;
   }
   
- /* Modern Navbar Styling with #0066cc Blue */
+ /* Modern Navbar Styling */
 nav {
-  background: #004c99; /* Match navbar background to the #0066cc color */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  padding: 1rem 2rem;
+  background-image: url(10110.jpg); /*background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  padding: 0.8rem 2rem;
   margin: 0;
   position: sticky; /* Sticks to the top on scroll */
   top: 0;
@@ -43,7 +43,7 @@ nav {
 nav .logo {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #ffffff; /* White logo text for contrast */
+  color: #f8f8f8; /* Soft blue color */
   text-transform: capitalize;
   font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
 }
@@ -57,9 +57,9 @@ nav ul {
   gap: 30px; /* Space between links */
 }
 
-/* Navbar Links Styling */
+/* Navbar Links */
 nav ul li a {
-  color: #ffffff; /* White links for contrast */
+  color: #ffffff; /* Dark gray for text */
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
@@ -69,18 +69,27 @@ nav ul li a {
 
 /* Hover Effect */
 nav ul li a:hover {
-  color: #cce1ff; /* Lighter blue on hover */
-  border-bottom: 2px solid #cce1ff; /* Underline effect */
+  color: #b9dafb; /* Change to blue on hover */
+  border-bottom: 2px solid #b9dafb; /* Underline effect */
 }
 
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap; /* Wrap content on smaller screens */
+}
+
   nav ul {
       flex-direction: column;
       align-items: center;
       gap: 10px;
   }
+  
+nav ul li {
+    margin: 10px 0;
 }
+}
+
 
 
 
