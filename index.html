@@ -9,7 +9,12 @@
 <body>
   <nav>
     <div class="logo">My Portfolio</div>
-    <ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul id="nav-links">
       <li><a href="#about">About Me</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -84,5 +89,13 @@
   <footer>
     <p>© 2024 Bawa Sheriff Muhammad. All Rights Reserved.</p>
   </footer>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('active');
+      const hamburger = document.querySelector('.hamburger');
+      hamburger.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>

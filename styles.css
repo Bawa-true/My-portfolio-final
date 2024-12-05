@@ -208,7 +208,6 @@ footer a:hover {
   }
 }
 
-  
   ul {
     padding-left: 20px;
   }
@@ -230,4 +229,70 @@ footer a:hover {
 
 .button-link:hover {
     background-color: #0066cc;
+}
+/* Hamburger Menu Styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  background-color: #ffffff;
+  height: 2px;
+  width: 24px;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    background-image: url(11101.jpg);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    padding: 10px 0;
+    border-top: 1px solid #ffffff;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+
+  #nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  #nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(3px, 3px);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(3px, -3px);
+  }
 }
